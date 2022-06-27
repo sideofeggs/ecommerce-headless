@@ -1,14 +1,15 @@
 import PageRouter from "./PageRouter";
 import StandardLayout from "./pages/StandardLayout";
 import { AnswersHeadlessProvider } from "@yext/answers-headless-react";
+
+import { routeConfig } from "./config/routeConfig";
+import { PageViewContextProvider } from "./context/PageViewContext";
+import { useEffect, useState, createContext } from "react";
 import {
   answersApiKey,
   answersExperienceKey,
   answersSandboxEndpoints,
 } from "./config/answersHeadlessConfig";
-import { routeConfig } from "./config/routeConfig";
-import { PageViewContextProvider } from "./context/PageViewContext";
-import { useEffect, useState, createContext } from "react";
 
 export type ScreenSize = "sm" | "md" | "lg" | "xl";
 
@@ -40,7 +41,6 @@ export default function App() {
       apiKey={answersApiKey}
       experienceKey={answersExperienceKey}
       locale="en"
-      verticalKey="faqs"
       endpoints={answersSandboxEndpoints}
     >
       <PageViewContextProvider>

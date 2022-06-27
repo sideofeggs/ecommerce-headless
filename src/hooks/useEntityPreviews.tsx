@@ -36,6 +36,7 @@ export function useEntityPreviews(
     headlessRef.current = provideAnswersHeadless({
       ...answersHeadlessConfig,
       headlessId,
+      
     });
   }
   const isMountedRef = useComponentMountStatus();
