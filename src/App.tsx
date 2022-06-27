@@ -9,7 +9,6 @@ import {
 import { routeConfig } from "./config/routeConfig";
 import { PageViewContextProvider } from "./context/PageViewContext";
 import { useEffect, useState, createContext } from "react";
-import { SearchBar, UniversalResults } from "@yext/answers-react-components";
 
 export type ScreenSize = "sm" | "md" | "lg" | "xl";
 
